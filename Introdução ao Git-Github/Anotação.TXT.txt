@@ -28,12 +28,11 @@ Criou uma pasta no repositório /c/Users/boldi/.ssh/id_ed25519.pub
 OBS: cntrol + l limpa a tela de códigos 
 Cd /Users/boldi/.ssh/ > ls (para listar os arquivos da chave publica e privada > cat id_ed25519.pub (gerou a chave na linha de baixo só copiar e colar no github)
 -lidando com as chaves
-Comando: eval $(ssh-agent -s) ele dá uma chave pid 1172
+Comando: eval $(ssh-agent -s) ele dá uma chave pid 
 Ls > ssh-add id_ed25519 (chave privada)>(colocar a senha)
 Está configurado!
 -Criando token
 Github> developer setting > personal acess token> tikar o primeio>colocar um titulo> Generation, só copiar e colar
-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
 repositório local está cheio de comits/ github é repositório remoto
 -criando um repositório
 Ls -a (mostra os arquivos ocultos)
