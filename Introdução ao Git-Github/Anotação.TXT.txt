@@ -1,0 +1,71 @@
+DIO
+GIT E GITHUB
+Cmd – prompt de comando
+Comandos básicos
+Dir- Listagem de pastas
+cd- descer nível diretório, ir na pasta especifica
+cd .. – voltar pasta
+cls- Limpar o terminal
+tab (tecla) – autocompleta
+mkdir – criar pasta no diretório
+echo – criando arquino na pasta pelo terminal
+(echo hello -enter- echo hello > hello.txt)
+Del – deletar arquivo dentro da pasta (del workspace)
+Rmdir – deletar a pasta do repositório com todos os arquivos dentro (rmdir workspace /S /Q)
+INTRODUÇÃO AO GIT
+- abrir no terminal o arquivo e encriptando
+Blobs: contem metadados do objetos
+Tree: armazenam blobs, monta a estrutura de onde esta localizada os arquivos
+Commit: da um sentindo (tree, parente, autor, mensagem e timestamp)
+Único para cada autor 
+Obs: é um sistema distribuído seguro
+-chave ssh e tokens
+Conexão segura e encriptada com duas chaves
+->Fazendo conexão de chave com o Github
+Loga, clica na foto (lado direito),setting,ssh and gpg Keys, new ssh keys
+Abrir o Git bash, código para criar: ssh-keygen -t ed25519 -C boldoleticia@gmail.com (email usado no github), colocar senha e repetir senha
+Criou uma pasta no repositório /c/Users/boldi/.ssh/id_ed25519.pub
+OBS: cntrol + l limpa a tela de códigos 
+Cd /Users/boldi/.ssh/ > ls (para listar os arquivos da chave publica e privada > cat id_ed25519.pub (gerou a chave na linha de baixo só copiar e colar no github)
+-lidando com as chaves
+Comando: eval $(ssh-agent -s) ele dá uma chave pid 1172
+Ls > ssh-add id_ed25519 (chave privada)>(colocar a senha)
+Está configurado!
+-Criando token
+Github> developer setting > personal acess token> tikar o primeio>colocar um titulo> Generation, só copiar e colar
+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
+repositório local está cheio de comits/ github é repositório remoto
+-criando um repositório
+Ls -a (mostra os arquivos ocultos)
+-configuração inicial
+$ git config --global user.email boldoleticia@gmail.com
+$ git config --global user.name LeBoldo
+b567a1f] commit inicial
+- git status 
+OBS: toda a vez que criar uma pasta tem que colocar ele em commit para reconhecer as mudanças feitas, passar para stage e depois commmita.
+Git add strogonoff.md receitas/
+Git commit -m “criar pastas receitas, move arquivo para receitas”
+Git status – nada para commitar
+
+Git add * - tudo que foi modificado no diretor e passa para stage
+Git config --list – mostra as configurações que foram feitas
+Git config --global --unset user.email  - caso precise trocar o email
+Git confif -- global --unset user.name – caso precise trocar o usuário
+Criar repositório no github e linkar ele com o git
+OBS: tudo oq foi feito até agora está no repositório local, vamos passar para o remoto
+Git remote add https://github.com/LeBoldo/livro-receitas.git (link que o github deu)
+Git remote -v
+Git status – para ver se está tudo certo
+Git push origin master – pede a credencial
+ 
+RESOLVENDO CONFLITOS
+Quando você atualiza alguma coisa e empurra no github uma atualização ele falha, tem puxar oq está e integrar com a atualização
+Git pull origin master
+Resolve o problema no código depois adiciona de novo
+Git add *
+Git commit -m “resolve conflito”
+Git status – para ver se foi
+-Para clonar repositório
+Git clone https://...
+
+
